@@ -17,4 +17,7 @@ This is the folder for the Controller
 ---
 
 The HelloWorld example shows how to process a form.\
-processFormV2 will convert the received data to upperCase and return it to the model.
+processFormV2 will convert the received data (using `HttpServletRequest`) to upperCase and return it to the model.\
+processFormV3 do the same using `@RequestParam("fieldName")` annotation.
+
+
