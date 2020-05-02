@@ -10,5 +10,10 @@
     <hr>
 
     <a href="showForm">Hello World Form</a>
+
+    <br /><br />
+
+	<!-- a relative path (no / at beginning) should be passed to avoid going to the root of domain -->
+    <a href="student/showForm">Student Form</a>
 </body>
 </html>
