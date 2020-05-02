@@ -24,11 +24,11 @@ processFormV3 do the same using `@RequestParam("fieldName")` annotation.
 ---
 
 ### Data Binding
-Spring has special tags for data binding. Those tags are used in the jsp file.\ 
+Spring has special tags for data binding. Those tags are used in the jsp file.\
 A special line has to be included on top of the jsp file.
 
 For the bindings, a model need to be created.\
-It can be done using a class that includes the required fields, an empty constructor and the getters and setters.\
+It can be done using a class that includes the required fields, an empty constructor, and the getters and setters.\
 Then, the controller simple add the object to the model.\
 When processing the submitted form, the controller receives the data from the `modelAttribute` set in the form and bind it to the object.
 
