@@ -17,7 +17,7 @@ This is the folder for the Controller
 ---
 
 The HelloWorld example shows how to process a form.\
-`@RequestMapping` annotation is used to define the URI for the method. It can also be used at the class level, so the methods become nested.\ 
+`@RequestMapping` annotation is used to define the URI for the method. It can also be used at the class level, so the methods become nested.\
 processFormV2 will convert the received data (using `HttpServletRequest`) to upperCase and return it to the model.\
 processFormV3 do the same using `@RequestParam("fieldName")` annotation.
 
