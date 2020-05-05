@@ -32,6 +32,6 @@ It can be done using a class that includes the required fields, an empty constru
 Then, the controller simple add the object to the model.\
 When processing the submitted form, the controller receives the data from the `modelAttribute` set in the form and bind it to the object.
 
-On the form, set the `modelAttribute` with the same value used in the controller.\
+On the jsp files, use the `form` tag from spring and set the `modelAttribute` with the same value used in the controller.\
 Also set the `path` for the inputs using the model field names.\
 Use `${}` to access data from the model in the jsp files.
