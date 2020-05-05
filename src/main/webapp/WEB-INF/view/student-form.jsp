@@ -16,11 +16,17 @@
         <br /><br />
 
 		<form:select path="country">
+
+			<form:options items="${student.countryOptions}" />
+
+			<!-- To use Model generate options, replace `option` in the form tag for `option`
+				use `items` instead of `value`.
 			<form:option value="Austria" label="Austria" />
 			<form:option value="Brazil" label="Brazil" />
 			<form:option value="Germany" label="Germany" />
 			<form:option value="Netherlands" label="Netherlands" />
 			<form:option value="Portugal" label="Portugal" />
+			-->
 		</form:select>
 
 		<br /><br />
