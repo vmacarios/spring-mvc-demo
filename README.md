@@ -35,3 +35,11 @@ When processing the submitted form, the controller receives the data from the `m
 On the jsp files, use the `form` tag from spring and set the `modelAttribute` with the same value used in the controller.\
 Also set the `path` for the inputs using the model field names.\
 Use `${}` to access data from the model in the jsp files.
+To `select` component, the values can be passed using one of the following lines:
+`<form:option value="Austria" label="Austria" />` - pass the list on the JSP file
+`<form:options items="${student.countryOptions}" />` - pass the list from the model (create a list on the constructor)
+`<form:options items="${countryOptions}" />` - use an external file with the key/values pair.
+To use a external file, the next line should be added to the spring XML file.
+`<util:properties id="countryOptions" location="classpath:../country.properties" />`
+Then, on the controller, add a Map field annotated with: `@Value("#{countryOptions}")`
+Next, add the attribute to the model in the proper method.

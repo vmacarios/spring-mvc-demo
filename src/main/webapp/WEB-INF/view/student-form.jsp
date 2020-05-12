@@ -17,9 +17,9 @@
 
 		<form:select path="country">
 
-			<form:options items="${student.countryOptions}" />
+			<form:options items="${countryOptions}" />
 
-			<!-- To use Model generate options, replace `option` in the form tag for `option`
+			<!-- To use Model generate options, replace `option` in the form tag for `options`
 				use `items` instead of `value`.
 			<form:option value="Austria" label="Austria" />
 			<form:option value="Brazil" label="Brazil" />
