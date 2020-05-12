@@ -45,3 +45,16 @@ Then, on the controller, add a Map field annotated with: `@Value("#{countryOptio
 Next, add the attribute to the model in the proper method.
 `radiobutton` components can be add using the same ways of `select`.
 `<form:radiobutton path="favoriteLanguage" value="Java" /> Java`
+`checkbox` component uses pretty much the same syntax as `radiobutton`.
+The difference will be in the model, as the field should support multiple values. 
+So, use an array of Strings.
+To iterate the array in the confirmation page, add the next line in the jsp file:
+`<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>`
+Then, use the `<c:forEach var="varName" items` to show the results.
+To use this taglib, it's necessary to add `jstl` to the pom.xml
+`<dependency>
+     <groupId>jstl</groupId>
+     <artifactId>jstl</artifactId>
+     <version>1.2</version>
+ </dependency>`
+ 
