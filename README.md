@@ -43,3 +43,5 @@ To use a external file, the next line should be added to the spring XML file.
 `<util:properties id="countryOptions" location="classpath:../country.properties" />`
 Then, on the controller, add a Map field annotated with: `@Value("#{countryOptions}")`
 Next, add the attribute to the model in the proper method.
+`radiobutton` components can be add using the same ways of `select`.
+`<form:radiobutton path="favoriteLanguage" value="Java" /> Java`
