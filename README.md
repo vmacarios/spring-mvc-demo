@@ -58,3 +58,21 @@ To use this taglib, it's necessary to add `jstl` to the pom.xml
      <version>1.2</version>
  </dependency>`
  
+### Hibernate Validator
+
+Validations can be done by using Hibernate Validator Annotations.\
+This is an implementation of JSR-303/309 specification.
+To use them, add the following dependency on POM.xml.
+
+`<dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.1.2.Final</version>
+</dependency>`
+
+Put the validations in the model. In this case, are:
+`@NotNull(message = "is required"` and `@Size(min=1, message = "is required"`
+Then, in the Controller, use `@Valid` to validate the model and bind the results using `BindingResult`
+Do a verification at bindingResult and do the right return to each scenario.
+PS: This validation won't fail if the inputted characters are whitespaces.
+To solve this, we need to use `StringTrimmerEditor` on a `@InitBinder` method to remove the leading and trailing whitespaces. 

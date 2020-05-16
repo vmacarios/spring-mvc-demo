@@ -15,5 +15,7 @@
 
 	<!-- a relative path (no / at beginning) should be passed to avoid going to the root of domain -->
     <a href="student/showForm">Student Form</a>
+    <br /><br />
+    <a href="customer/showForm">Customer Form</a>
 </body>
 </html>
