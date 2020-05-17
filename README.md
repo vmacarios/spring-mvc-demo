@@ -71,8 +71,19 @@ To use them, add the following dependency on POM.xml.
 </dependency>`
 
 Put the validations in the model. In this case, are:
-`@NotNull(message = "is required"` and `@Size(min=1, message = "is required"`
+`@NotNull(message = "is required")` and `@Size(min=1, message = "is required)"`
 Then, in the Controller, use `@Valid` to validate the model and bind the results using `BindingResult`
 Do a verification at bindingResult and do the right return to each scenario.
+The `bindingResult` can also be printed to show the errors types. 
+With the type, it's possible to create a custom message.
 PS: This validation won't fail if the inputted characters are whitespaces.
 To solve this, we need to use `StringTrimmerEditor` on a `@InitBinder` method to remove the leading and trailing whitespaces. 
+
+Other validation annotations are `@Min` and `@Max`.
+It's also possible to validate through a regex using `@Pattern(regexp="^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")`
+To create a custom error message, use the error type from the `bindingResult` in a messages.properties file.
+Call this files in the config XML with the following bean:
+`<bean id="messageSource"
+     class="org.springframework.context.support.ResourceBundleMessageSource">
+     <property name="basenames" value="messages" />
+ </bean>`
