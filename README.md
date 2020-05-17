@@ -8,7 +8,7 @@ This folder contains the web.xml file where the Dispatcher and URL mapping are c
 The contextConfig XML file is also located in this folder.\
 The contextConfig includes the component-scan tag, `<mvc:annotation-driven/>` tag and the View Resolver Bean.\
 The view folder (where the JSP files will be placed) should also be located here.\
-Add the tag `<mvc:resources mapping="/**" location="/WEB-INF/view/images"></mvc:resources>` to map static resources.\
+Add the tag `<mvc:com.macarios.springdemo.mvc.resources mapping="/**" location="/WEB-INF/view/images"></mvc:com.macarios.springdemo.mvc.resources>` to map static com.macarios.springdemo.mvc.resources.\
 Use the syntax `<img src="${pageContext.request.contextPath}/images/spring-logo.jpg" width=200 height=100>` to access them.
 
 #### src/main/java/package
