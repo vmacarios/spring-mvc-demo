@@ -27,6 +27,11 @@ public class CustomerController {
 		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}
 
+	/**
+	 * Display the form.
+	 * @param theModel - the form model. In this case, the Customer model.
+	 * @return the form.
+	 */
 	@RequestMapping("/showForm")
 	public String showForm(Model theModel) {
 		theModel.addAttribute("customer", new Customer());
@@ -34,10 +39,20 @@ public class CustomerController {
 		return "customer-form";
 	}
 
+	/**
+	 * Process and validate the form to save the data.
+	 * @param customer - the filled form.
+	 * @param bindingResult - to check if the form has any errors.
+	 * @return the form again in case of errors, or the confirmation page if all data is ok.
+	 */
 	@RequestMapping("/processForm")
 	public String processForm(
 			@Valid @ModelAttribute("customer") Customer customer,
 			BindingResult bindingResult) {
+
+		int i = Integer.MIN_VALUE;
+		int[] in = new int[5];
+		int[] b = new int[in.length];
 
 		if (bindingResult.hasErrors()) {
 			return "customer-form";

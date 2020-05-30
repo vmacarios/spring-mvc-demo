@@ -9,5 +9,6 @@
 The customer is confirmed: ${customer.firstName} ${customer.lastName} <br />
 The customer has: ${customer.freePasses} free passes <br />
 Postal Code: ${customer.postalCode} <br />
+Course Code: ${customer.courseCode} <br />
 </body>
 </html>

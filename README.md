@@ -85,3 +85,15 @@ Call this files in the config XML with the following bean:\
      `class="org.springframework.context.support.ResourceBundleMessageSource">`\
      `<property name="basenames" value="messages" />`\
  `</bean>`
+ 
+To create a custom validator annotation, create a new Annotation class with the following parameters:\
+`@Constraint(validatedBy = CourseCodeConstraintValidator.class)` - the class with the logic.\
+`@Target({ElementType.METHOD, ElementType.FIELD})` - where the annotation can be used.\
+`@Retention(RetentionPolicy.RUNTIME)` - when to check the validations.
+In the same file, define the default value and message.
+
+To define the logic, `implements ConstraintValidator<CourseCode, String>` on the class.\
+Where `String` is the type of data to be validated.
+
+ 
+ 
